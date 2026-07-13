@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elderly Care</title>
+    <link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+
+</head>
+<body>
+    <section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+
+
+<!--both <div> and <section> are "container" elements used to group content-->
+    <section class="banner"> 
+        <div class="banner-container">
+            
+          
+            <img src="images/banner.png" alt="Medical Background">
+            <div class="banner-text">
+                <h1>"CONNECTING GENERATIONS THROUGH BETTER HEALTH"</h1>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+
+
+
+<!--4 serivice row-->
+
+    <section class="services-row">
+        <div class="services-box" > 
+            <a href="OnlineAppointment.html">
+              <img src="images/mainpage/1.png" >
+              <span>ONLINE APPOINTMENT</span>
+            </a>
+        </div>
+        
+
+        <div class="services-box" > 
+            <a href="OrderMedicine.html">
+              <img src="images/mainpage/2.png" >
+              <span>ORDER MEDICINE</span>
+            </a>
+        </div>
+
+        <div class="services-box" > 
+            <a href="FindCaregiver.html">
+              <img src="images/mainpage/3.png" >
+              <span>FIND CAREGIVER</span>
+            </a>
+        </div>
+
+        <div class="services-box" > 
+            <a href="NMP.html">
+              <img src="images/mainpage/4.png"  sizes height="50px">
+              <span>MEAL PLANNING</span> <!--without css mapupuunta to beside the picture and inside the box-->
+            </a>
+        </div>
+
+
+
+        <div class="services-box" > 
+            <a href="ContactUs.html">
+              <img src="images/mainpage/6.png" >
+              <span>CONTACT US</span>
+            </a>
+        </div>
+
+        <div class="services-box" > 
+            <a href="PatientPeviews.html">
+              <img src="images/mainpage/7.png" >
+              <span>PATIENT REVIEWS</span>
+            </a>
+        </div>
+    </section>
+
+
+    
+
+ <section class="header" id="footer-placeholder">   </section>
+</body>
+</html>

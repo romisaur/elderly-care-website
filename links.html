@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="style.css" />
+
+
+
+
+</head>
+<body>
+
+
+    
+
+     <section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+<div style="margin-left:20px;"> <!--para may space sa gilid-->
+                <h1>Links</h1>
+                <p>PHOTOS link 
+
+            MAIN PAGE<br><br>
+
+            https://www.canva.com/graphics/MAFcf4RWey4/ - People Icon by Noun Project <br>
+            https://www.canva.com/graphics/MAHE-O0KVlQ/ - Spectaicons <br>
+            https://www.canva.com/graphics/MAHA6iF915s/ - Stealth Black<br>
+            https://www.canva.com/graphics/MAHHjbsju1c/ - GaluhSekar<br>
+            https://www.canva.com/graphics/MAD7QlPW_W0/ - Linector<br>
+            https://www.canva.com/graphics/MAG1psvAQQU/ - Spectaicons<br>
+            https://www.canva.com/graphics/MAFPBsTyPi8/ - NK<br>
+            https://www.canva.com/graphics/MAG6keoxQDY/ - Visual Vectors<br><br>
+
+            ONLINE APPOINTMENT FORM<br><br>
+
+            https://www.canva.com/graphics/MAHDpU7P1cc/ - Rusmicon<br>
+            https://www.canva.com/graphics/MAFKKxwYp40/ - Abdi Hasibuan from UPDIDO<br><br>
+
+
+            PATIENT REVIEWS<br><br>
+
+            https://www.canva.com/graphics/MAEF7qKe1x0/ - Pixabay<br>
+            https://www.canva.com/graphics/MAEuj5ZkY4E/ - Sketchify<br><br>
+
+
+            ALZHEIMER’S & DEMENTIA CARE<br><br>
+
+            https://www.canva.com/graphics/MAFDos1NQcw/ - Irma Susanti from Sentya Irma<br>
+            https://www.canva.com/graphics/MAG3D_H2bjw/ - Circlon Tech from MAGYS<br><br>
+
+
+            CHRONIC DISEASE MANAGEMENT<br><br>
+
+            https://www.canva.com/graphics/MAHCbkesboI/ - Purple Iconix<br><br>
+
+
+            SERVICES<br><br>
+
+            https://unpkg.com/@fortawesome/fontawesome-free@6.2.0/svgs/solid/hand-holding-heart.svg  - 1st image<br>
+            https://unpkg.com/@fortawesome/fontawesome-free@6.2.0/svgs/solid/wheelchair.svg - 2nd image<br><br>
+
+
+
+
+
+            FIND CAREGIVERS<br><br>
+
+            https://www.canva.com/photos/MAEPhVfY4wE/ - Laura James from Pexels<br>
+            https://www.canva.com/photos/MAGcu68h5ZU/ - Aflo Images<br>
+            https://www.canva.com/photos/MAGcuBiJzZo/ - Aflo Images<br>
+            https://www.canva.com/photos/MAEPJrswkWs/ - Gustavo Fring from Pexels<br><br>
+
+            SOCIAL ENGAGEMENT PROGRAM<br><br>
+
+            https://www.canva.com/graphics/MAFCOVjVfEo/ - Sketchify<br>
+            https://www.canva.com/graphics/MAFKrN-lxBc/ - Simple Glyphs<br>
+            https://www.canva.com/graphics/MAEHil0dthI/ - GDJ from Pixabay<br>
+            https://www.canva.com/graphics/MAEFrmiiIQs/ - OpenClipart - Vectors from Pixabay<br><br>
+
+
+
+
+
+
+            </p>
+</div>
+<section class="header" id="footer-placeholder">   </section>
+</body>
+</html>

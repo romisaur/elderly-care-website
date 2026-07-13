@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>Physical Therapy Programs</title>
+   <link rel="stylesheet"  href="style.css" />
+   <link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+
+
+  <style>
+       body {
+          background-color: white;
+          font-family: Arial, sans-serif;
+
+   
+      }
+
+      h1 {
+        margin-top: 30px; /*space sa top ng h1*/
+        margin-bottom: 30px;/*space sa bottom ng h1*/
+        text-align: center; /*text location na nasa center*/
+        color: #4a87a6; 
+        font-size: 40px;
+      }
+
+      .row {
+        display: flex ; /*position na magkatabi mga box instead pababa*/
+        justify-content: center; /*content position sa gitna*/
+        gap: 20px 100px; /*height and width na gap ng boxes*/
+        margin-bottom: 20px;
+      }
+
+      .box {
+        width: 30%; /*width ng box pero percentage*/ 
+        padding: 30px; /*space sa loob*/
+        border: 2px solid #4a87a6; /*border line*/
+        border-radius: 15px; /*round corner sa gedli*/
+        text-align: center;/*alignment ng text sa loob ng box*/
+      }
+
+
+
+      .btn { /*button na join now sa ilalim*/
+        display: block;  /*it means stacking position pababa siya hindi katabi*/
+        width: 300px;  /*laki ng button */
+        margin: 30px auto;  /*width and auto height*/
+        padding: 15px; /*height*/
+        background-color: #4a87a6;
+        color: white;  /*text color*/
+        text-align: center;
+        border-radius: 50px;
+        letter-spacing: 2px;
+      }
+
+      a {
+        text-decoration: none; /*para mawala yugn white line*/
+      }
+
+
+
+
+  </style>
+   
+ </head>
+ <body>
+
+
+     <section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <h1>Physical Therapy Programs</h1>
+
+<!--1st ROW 2 boxes-->
+
+
+   <div class="row">
+
+     <div class="box">
+       <h2>Therapy Goals</h2>
+       <p>
+         Increase range of motion, rebuild muscle strength, improve balance,
+         and restore normal movement.
+       </p>
+     </div>
+
+
+     <div class="box">
+       <h2>Weekly Schedule</h2>
+       <p>
+         Therapy sessions are done 5 days a week, with 1-2 rest days for
+         recovery and muscle repair.
+       </p>
+     </div>
+
+   </div>
+
+<!--2nd ROW 2 boxes-->
+   <div class="row">
+     <div class="box">
+       <h2>Exercise Plan</h2>
+       <p>
+         Includes guided exercises such as stretching, strengthening, and
+         low-impact movements tailored to the patient's condition.
+       </p>
+     </div>
+
+
+
+     <div class="box">
+       <h2>Types of Exercises</h2>
+       <p>
+         Includes guided exercises such as stretching, strengthening, and
+         low-impact movements tailored to the patient's condition.
+       </p>
+     </div>
+   </div>
+
+<!--3rd ROW 2 boxes-->
+   <div class="row">
+     <div class="box">
+       <h2>Daily Routine</h2>
+       <p>
+         Perform therapy exercises 1-2 times per day, with each session lasting
+         20-40 minutes depending on intensity.
+       </p>
+     </div>
+     <div class="box">
+       <h2>Progress Tracking</h2>
+       <p>
+         Monitor improvements in flexibility, strength, pain level, and
+         mobility each week.
+       </p>
+     </div>
+   </div>
+
+   <!--Link lilitaw yung login floating window-->
+   <a href="#loginModal" class="btn">JOIN NOW</a>  
+   </a>
+   
+   
+ <section class="header" id="footer-placeholder">   </section>
+
+ 
+ </body>
+</html>

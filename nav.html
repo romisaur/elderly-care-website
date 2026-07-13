@@ -1,0 +1,65 @@
+
+<nav> <a href="index.html"><img src="images/logo.png" ></a>
+
+
+
+
+
+
+    <div class="nav-links">
+        <ul>
+            <li><a href="Final.html" style="color: white; text-decoration: none;" >HOME</a></li>
+            <li><a href="Services.html " style="color: white; text-decoration: none;">SERVICES</a></li>
+
+            <li class="dropdown">
+                <input type="checkbox" id="care-toggle" class="dropdown-checkbox">
+                <label for="care-toggle" class="dropdown-toggle">CARE PROGRAMS</label>
+                
+                <ul class="dropdown-menu">
+                    <li><a href="ADC.html">Alzheimer’s & Dementia Care</a></li>
+                    <li><a href="CD.html">Chronic Disease Management</a></li>
+                    <li><a href="PTP.html">Physical Therapy Programs</a></li>  
+                    <li><a href="SEP.html">Social Engagement Programs</a></li>
+                </ul>
+            </li>
+
+            <li><a href="FindCaregiver.html" style="color: white; text-decoration: none;">FIND CAREGIVERS</a></li>
+                                                         
+            <li class="login-btn" >
+                <a href="#loginModal"><b>LOGIN/REGISTER</b></a><img src="images/loginicon.png" class="login-img-btn" > 
+            </li>
+
+
+
+        </ul>
+    </div>
+
+
+
+    <div id="loginModal" class="modal-overlay">
+    
+    <a href="#" class="modal-close-overlay"></a>
+    
+    <div class="modal-content">
+        <h2 class="modal-title">LOG IN</h2>
+        
+        <form class="login-form">
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required autocomplete="off">
+            </div>
+            
+            <div class="input-group" >
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <button type="submit" class="submit-login-btn">LOG IN</button>
+        </form>
+        
+        <p class="register-text">
+            Don't have an Account? <a href="#" class="register-link">Register now</a>
+        </p>
+    </div>
+</div>
+</nav>

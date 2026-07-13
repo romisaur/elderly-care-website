@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alzheimer’s & Dementia Care</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background: white;
+    padding: 20px;
+}
+
+/* Description Section */
+.main-card {
+    margin-top: 15px;
+    border: 2px solid #6889a0;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-left img {
+    width: 90px;
+}
+
+.card-right h1 {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.card-right p {
+    color: #4d8db4;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Section Title Container */
+.tips-title {
+    width: 450px;
+    margin: 30px auto;
+    border: 2px solid #6889a0;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #f3f3f3;
+}
+
+.tips-title img {
+    width: 35px;
+}
+
+.tips-title span {
+    color: #4d8db4;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Information Box Grid Layout */
+.tips-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tips-box {
+    background: #4d8db4;
+    color: white;
+    width: 33%;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 250px;
+}
+
+.tips-box p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.tips-box ul {
+    padding-left: 25px;
+}
+
+.tips-box ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: normal; 
+    line-height: 1.5;
+}
+
+
+</style>
+</head>
+<body>
+
+
+    
+<section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    
+<section class="main-card">
+    <div class="card-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png" alt="Care Icon">
+    </div>
+    <div class="card-right">
+        <h1>Alzheimer’s & Dementia Care</h1>
+        <p>
+            Dementia is an umbrella term describing a collection of symptoms that affect memory, thinking, reasoning, and the ability to perform everyday activities independently.
+        </p>
+    </div>
+</section>
+
+<div class="tips-title">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Tips Icon">
+    <span>TIPS, GUIDES & ADVICE</span>
+</div>
+
+<section class="tips-container">
+    <div class="tips-box">
+        <ul>
+            <li>Maintain a consistent daily routine</li>
+            <li>Use simple and clear communication</li>
+            <li>Create a safe and familiar environment</li>
+            <li>Encourage mental activities like puzzles</li>
+            <li>Be patient and supportive always</li>
+        </ul>
+    </div>
+
+    <div class="tips-box">
+        <p>Alzheimer’s & Dementia Care Communication Tips</p>
+        <ul>
+            <li>Keep sentences short and simple</li>
+            <li>Speak calmly</li>
+            <li>Ask one question at a time</li>
+            <li>Use visual cues</li>
+            <li>Before you speak, get their attention first</li>
+            <li>Speak slowly</li>
+        </ul>
+    </div>
+
+    <div class="tips-box">
+        <p>Common Alzheimer’s & Dementia Symptoms include:</p>
+        <ul>
+            <li>Memory loss</li>
+            <li>Confusion with time or place</li>
+            <li>Mood or personality changes</li>
+            <li>Difficulty speaking or understanding</li>
+            <li>Wandering</li>
+            <li>Trouble with daily tasks</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="header" id="footer-placeholder"></section>
+</body>
+</html>

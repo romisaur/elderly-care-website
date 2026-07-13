@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elderly Care - Interactive Reviews with Name</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+
+
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f0f4f8; margin: 0; padding: 0; }
+        
+        .container { width: 95%; max-width: 1000px; margin: 30px auto; }
+        .section-box {
+            background-color: white; border: 2px solid #a8c1d6;
+            border-radius: 35px; padding: 30px; margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            color: #4a7c9d; font-size: 22px; font-weight: bold;
+            display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+        }
+
+        #reviews-list { max-height: 300px; overflow-y: auto; padding-right: 10px; }
+        #reviews-list::-webkit-scrollbar { width: 6px; }
+        #reviews-list::-webkit-scrollbar-thumb { background: #4a7c9d; border-radius: 10px; }
+
+        .review-item { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; animation: fadeIn 0.4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .review-header { display: flex; justify-content: space-between; font-size: 14px; }
+        .stars-display { color: #f1c40f; margin: 5px 0; font-size: 16px; }
+        .comment-text { font-style: italic; color: #555; font-size: 13px; }
+
+        .input-group { margin-bottom: 15px; }
+        .input-group label { display: block; color: #4a7c9d; font-weight: bold; font-size: 13px; margin-bottom: 8px; }
+        
+        .name-input {
+            width: 100%; padding: 10px 15px; border: 1px solid #a8c1d6;
+            border-radius: 10px; font-size: 14px; outline: none; margin-bottom: 15px;
+        }
+
+        .add-comment-area { display: flex; gap: 15px; align-items: flex-start; }
+        .user-icon { font-size: 45px; color: #a8c1d6; }
+        
+        textarea {
+            width: 100%; height: 80px; border: 1px solid #a8c1d6;
+            border-radius: 15px; padding: 12px; resize: none; outline: none; font-size: 14px;
+        }
+
+        .star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-start; gap: 5px; margin: 10px 0; }
+        .star-rating input { display: none; }
+        .star-rating label { font-size: 25px; color: #ddd; cursor: pointer; transition: 0.2s; }
+        .star-rating label:hover, .star-rating label:hover ~ label, .star-rating input:checked ~ label { color: #f1c40f; }
+
+        .post-btn {
+            background-color: #5b92ad; color: white; border: none;
+            padding: 12px 30px; border-radius: 10px; font-weight: bold;
+            cursor: pointer; float: right; display: flex; align-items: center; gap: 8px; transition: 0.3s;
+        }
+        .post-btn:hover { background-color: #4a7c9d; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+
+    
+     <section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+    
+
+    <div class="container">
+        <!-- Reviews Display Section -->
+        <div class="section-box">
+            <div class="section-title"><i class="fa-solid fa-comment-dots"></i> PATIENT REVIEWS</div>
+            <div id="reviews-list">
+                <div class="review-item">
+                    <div class="review-header"><strong>Maria S.</strong><span>2 days ago</span></div>
+                    <div class="stars-display">★★★★★</div>
+                    <p class="comment-text">"The process was so easy and the doctor is very kind."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Comment Form Section -->
+        <div class="section-box">
+            <div class="section-title" style="font-size: 18px;">Add your comment:</div>
+            
+            <div class="input-group">
+                <label>Your Name:</label>
+                <input type="text" id="user-name" class="name-input" placeholder="Enter your name here...">
+            </div>
+
+            <div class="add-comment-area">
+                <div class="user-icon"><i class="fa-solid fa-circle-user"></i></div>
+                <div style="flex-grow: 1;">
+                    <label>Comment:</label>
+                    <textarea id="comment-input" placeholder="Type your comment here..."></textarea>
+                    
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                    </div>
+
+                    <button class="post-btn" onclick="postComment()">POST COMMENT <i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function postComment() {
+            const nameInput = document.getElementById('user-name');
+            const commentInput = document.getElementById('comment-input');
+            const ratingInput = document.querySelector('input[name="rating"]:checked');
+            
+            if (nameInput.value.trim() === "" || commentInput.value.trim() === "" || !ratingInput) {
+                alert("Please fill in your name, comment, and select a star rating!");
+                return;
+            }
+
+            const list = document.getElementById('reviews-list');
+            const newItem = document.createElement('div');
+            newItem.className = 'review-item';
+
+            let stars = "";
+            for (let i = 0; i < ratingInput.value; i++) stars += "★";
+            for (let i = ratingInput.value; i < 5; i++) stars += "☆";
+
+            newItem.innerHTML = `
+                <div class="review-header"><strong>${nameInput.value}</strong><span>Just now</span></div>
+                <div class="stars-display">${stars}</div>
+                <p class="comment-text">"${commentInput.value}"</p>
+            `;
+
+            list.insertBefore(newItem, list.firstChild);
+            
+            // Clear inputs after submission
+            nameInput.value = "";
+            commentInput.value = "";
+            ratingInput.checked = false;
+            list.scrollTop = 0;
+        }
+    </script>
+
+ <section class="header" id="footer-placeholder">   </section>
+
+
+</body>
+</html>

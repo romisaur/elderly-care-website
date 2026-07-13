@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Care Program</title>
+
+   <link rel="stylesheet" href="style.css"> 
+  <link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#ffffff;
+      color: white;
+    }
+
+
+
+    /* main content */
+
+    .container{
+      text-align:center;
+      padding:40px 30px;
+    }
+
+    .container h2{
+      color:#66a9d9;
+      font-size:40px;
+      margin-bottom:15px;
+      font-style:italic;
+    }
+
+    .container p{
+      max-width:600px;
+      margin:0 auto 50px;
+      line-height:1.6;
+      font-size:18px;
+      font-style:italic;
+      color: black;
+    }
+
+    /* mga cards */
+
+    .cards{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .card{
+      width:260px;
+      border:3px solid #66a9d9;
+      border-radius:20px;
+      padding:25px 20px;
+      background:white
+    }
+
+    .card img{
+      width:120px;
+      height:120px;
+      object-fit:contain;
+      margin-bottom:20px;
+    
+    }
+
+    .card p{
+      font-size:16px;
+      margin-bottom:20px;
+      min-height:70px;
+    }
+
+    .join-btn{
+      display:inline-block;
+      width:100%;
+      padding:14px;
+      background:#3c78a1;
+      border-radius:12px;
+      color:white;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    /* RESPONSIVE  */
+
+    @media(max-width:768px){
+
+      .container h2{
+        font-size:28px;
+      }
+
+      .cards{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      .card{
+        width:90%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+     <section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+            
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- MAIN SECTION -->
+
+  <div class="container">
+
+    <h2>OUR SOCIAL ENGAGEMENT PROGRAM</h2>
+
+    <p>
+      We offer a variety of activities and events that
+      inspire connection, purpose, and happiness in
+      everyday life.
+    </p>
+
+    <div class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+
+        <img src="images/SEP/group.png">
+
+        <p>
+          Group gatherings, celebrations, and
+          community meet-ups.
+        </p>
+
+        <a href="#loginModal" class="join-btn">JOIN NOW</a>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+
+        <img src="images/SEP/paint.png" >
+
+        <p>
+          Art, music, crafts, and creative
+          sessions to inspire the mind.
+        </p>
+
+        <a href="#loginModal" class="join-btn">JOIN NOW</a>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+
+        <img src="images/SEP/mind.png"  sizes="60px">
+
+        <p>
+          Fun and engaging games that
+          challenges the mind.
+        </p>
+
+        <a href="#loginModal" class="join-btn">JOIN NOW</a>
+
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+
+        <img src="images/SEP/meditate.png" alt="">
+
+        <p>
+          Light exercises, stretching,
+          and outdoor walks.
+        </p>
+
+        <a href="#loginModal" class="join-btn">JOIN NOW</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    
+  <section class="header" id="footer-placeholder">   </section>
+</body>
+</html>
+
+
+
+
+

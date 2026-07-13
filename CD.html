@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronic Disease Management</title>
+<link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+   
+
+
+body{
+    background-color: white;
+    padding:10px;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.main-card{
+    margin-top:15px;
+    border:2px solid #6889a0;
+    border-radius:12px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    background: white;
+}
+
+
+.card-left img{
+    width:90px;
+}
+
+
+.card-right h1{
+    font-size:32px;
+    font-style:italic;
+    margin-bottom:15px;
+}
+
+.card-right p{
+    color:#4d8db4;
+    font-size:18px;
+    line-height:1.5;
+}
+
+
+
+.tips-title{
+    width:450px;
+    margin:20px auto;
+    border:2px solid #6889a0;
+    border-radius:15px;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    background:#f3f3f3;
+}
+
+.tips-title img{
+    width:35px;
+}
+
+.tips-title span{
+    color:#4d8db4;
+    font-size:24px;
+    font-weight:bold;
+    font-style:italic;
+}
+
+/* Boxes */
+
+.tips-container{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    margin-top:20px;
+}
+
+.tips-box{
+    background:#4d8db4;
+    color:white;
+    width:33%;
+    padding:25px;
+    border-radius:15px;
+    min-height:250px;
+}
+
+.tips-box p{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:15px;
+    line-height:1.4;
+}
+
+.tips-box ul{
+    padding-left:25px;
+}
+
+.tips-box ul li{
+    margin-bottom:12px;
+    font-size:16px;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+    </style>
+
+
+
+</head>
+
+<body>
+    
+   
+<section class="header" id="header-placeholder"></section>
+
+   
+    <script>
+    fetch('nav.html')
+        .then(response => {
+            if (!response.ok) throw new Error('File not found');
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        })
+        .catch(error => console.log('Error:', error));
+    </script>
+    
+
+   
+    <section class="main-card">
+
+        <div class="card-left">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/4320/4320371.png">
+
+        </div>
+
+        <div class="card-right">
+
+            <h1>CHRONIC DISEASE MANAGEMENT</h1>
+
+            <p>
+                Chronic diseases are long-term medical conditions that usually develop slowly and may last for many years or throughout a person’s lifetime. These illnesses often require continuous medical attention, lifestyle changes, and regular monitoring to prevent complications and improve quality of life.
+            </p>
+
+        </div>
+
+    </section>
+
+    
+    <div class="tips-title">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+
+        <span>TIPS, GUIDES & ADVICE</span>
+
+    </div>
+
+        <section class="tips-container">
+
+       
+        <div class="tips-box">
+
+            <ul>
+                <li>Eat balanced meals with vegetables, fruits, whole grains, and lean protein.</li>
+
+                <li>Reduce salty, sugary, and oily foods.</li>
+
+                <li>Drink enough water daily.</li>
+
+                <li>Exercise regularly such as walking, stretching, or light home workouts for at least 30 minutes.</li>
+
+                <li>Avoid smoking and limit alcohol intake.</li>
+
+                <li>Maintain a healthy body weight.</li>
+            </ul>
+
+        </div>
+
+        
+        <div class="tips-box">
+
+            <p>
+                Chronic disease management improves wellness and prevents complications by:
+            </p>
+
+            <ul>
+                <li>Regular medical checkups</li>
+
+                <li>Proper medication management</li>
+
+                <li>Healthy eating habits</li>
+
+                <li>Physical activity and exercise</li>
+
+                <li>Stress management</li>
+
+                <li>Patient education and self-care</li>
+            </ul>
+
+        </div>
+
+        
+        <div class="tips-box">
+
+            <p>
+                Common chronic diseases include:
+            </p>
+
+            <ul>
+                <li>Diabetes</li>
+
+                <li>Hypertension</li>
+
+                <li>Heart Disease</li>
+
+                <li>Arthritis</li>
+
+                <li>Asthma</li>
+
+                <li>Chronic Kidney Disease</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <section class="header" id="footer-placeholder">   </section>
+</body>
+</html>

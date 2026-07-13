@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nutritional and Meal Planning</title>
+   <link rel="stylesheet" href="style.css" />
+   <link rel="icon" type="image/png" href="images/logo2.png" style="width: 10px;">
+
+
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+           
+            color: #333333;
+        }
+
+       
+        h1 {
+            color: #4d8db4;
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 1000;
+            margin-bottom: 15px;
+            color: #111111;
+        }
+
+        /* Container & Cards Layout */
+        .meal-plan-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .day-card {
+            border: 2px solid #588fa8;
+            border-radius: 20px;
+            padding: 25px 35px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        /* Card Content Styling */
+        .day-title {
+            font-size: 18px;
+            font-weight: 700;
+            font-style: italic;
+            margin-bottom: 12px;
+            color: #000000;
+        }
+
+        .meal-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .meal-list li {
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            color: #222222;
+        }
+
+        .meal-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        
+        .meal-list li strong {
+            font-style: normal;
+            font-weight: 700;
+        }
+        </style>
+
+
+
+
+
+
+
+
+
+
+ </head>
+ <body>
+
+    
+
+  
+     <section class="header" id="header-placeholder">   </section>
+    
+
+    <script>
+       
+        fetch('nav.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Nav file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+
+      
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer file not found');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+
+
+    <main class="meal-plan-container">
+        
+        <h1>Nutritional and Meal Planning</h1>
+        
+        <h2>For Obese Elder</h2>
+
+        <section class="day-card">
+            <div class="day-title">Day 1</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Oatmeal cooked in unsweetened almond milk, topped with a tablespoon of ground flaxseeds and a handful of fresh blueberries. One hard-boiled egg.</li>
+                <li><strong>Lunch:</strong> Grilled chicken breast strips over a bed of spinach, cucumber, and cherry tomatoes, drizzled with olive oil and lemon juice.</li>
+                <li><strong>Snack:</strong> A small handful of raw walnuts (excellent for heart health).</li>
+                <li><strong>Dinner:</strong> Baked salmon fillet with a side of steamed broccoli florets and a small scoop of cooked quinoa.</li>
+            </ul>
+        </section>
+
+        <section class="day-card">
+            <div class="day-title">Day 2</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Low-fat, unsweetened Greek yogurt (plain) topped with a dash of cinnamon and a few chopped almonds.</li>
+                <li><strong>Lunch:</strong> Lentil vegetable soup (carrots, celery, tomatoes) served with a small side salad.</li>
+                <li><strong>Snack:</strong> Celery sticks paired with two tablespoons of natural, sugar-free peanut butter.</li>
+                <li><strong>Dinner:</strong> Baked cod or whitefish, roasted asparagus spears, and half a baked sweet potato (skin on for fiber).</li>
+            </ul>
+        </section>
+
+
+        <section class="day-card">
+            <div class="day-title">Day 3</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Scrambled egg whites (or one whole egg) with spinach and tomatoes, cooked in a light wipe of olive oil. One slice of 100% whole-grain sprouted toast.</li>
+                <li><strong>Lunch:</strong> Tuna salad made with a light touch of olive-oil-based mayonnaise or mashed avocado, wrapped in large romaine lettuce leaves.</li>
+                <li><strong>Snack:</strong> Sliced English cucumber with a small side of hummus.</li>
+                <li><strong>Dinner:</strong> Lean ground turkey stir-fry with mixed bell peppers, zucchini, and snap peas, served over a small bed of brown rice.</li>
+            </ul>
+        </section>
+
+
+        <section class="day-card">
+            <div class="day-title">Day 4</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Chia seed pudding made with unsweetened soy or almond milk, flavored with vanilla extract and topped with a few raspberries.</li>
+                <li><strong>Lunch:</strong> Quinoa salad mixed with diced grilled chicken, black beans, chopped parsley, and a light vinaigrette.</li>
+                <li><strong>Snack:</strong> One small green apple, sliced.</li>
+                <li><strong>Dinner:</strong> Grilled tofu or chicken breast, steamed Brussels sprouts, and a side of mashed cauliflower (a great low-glycemic alternative to potatoes).</li>
+            </ul>
+        </section>
+
+        <section class="day-card">
+            <div class="day-title">Day 5</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Oatmeal topped with a spoonful of sunflower seeds and a small handful of strawberries.</li>
+                <li><strong>Lunch:</strong> A large bowl of mixed greens topped with canned salmon (drained), chickpeas, and a dressing made of extra virgin olive oil and apple cider vinegar.</li>
+                <li><strong>Snack:</strong> A small serving of plain cottage cheese with a pinch of black pepper.</li>
+                <li><strong>Dinner:</strong> Skinless chicken thighs (baked) with roasted zucchini slices and a small side of fiber-rich barley or farro.</li>
+            </ul>
+        </section>
+
+        <section class="day-card">
+            <div class="day-title">Day 6</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Omelet stuffed with sliced mushrooms, spinach, and a sprinkle of low-fat feta cheese.</li>
+                <li><strong>Lunch:</strong> White bean and kale soup cooked in a low-sodium vegetable broth, served with a small side of lean protein.</li>
+                <li><strong>Snack:</strong> A quarter of an avocado mashed on one high-fiber whole-grain cracker.</li>
+                <li><strong>Dinner:</strong> Baked shrimp or whitefish with a side of roasted cauliflower and green beans.</li>
+            </ul>
+        </section>
+
+        <section class="day-card">
+            <div class="day-title">Day 7</div>
+            <ul class="meal-list">
+                <li><strong>Breakfast:</strong> Plain Greek yogurt mixed with a tablespoon of chia seeds and a few blackberries.</li>
+                <li><strong>Lunch:</strong> Leftover chicken or turkey breast slices with a cold bean salad (kidney beans, black beans, red onion, parsley, olive oil).</li>
+                <li><strong>Snack:</strong> A handful of pumpkin seeds.</li>
+                <li><strong>Dinner:</strong> Lean beef sirloin or venison (very small portion, trimmed of all visible fat), served alongside a generous helping of steamed spinach and roasted carrots.</li>
+            </ul>
+        </section>
+
+        <br>
+    </main>
+        
+     <section class="header" id="footer-placeholder">   </section>
+</body>
+</html>
